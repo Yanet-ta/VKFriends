@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4215AED21DE2093600C65E9E /* VKFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED11DE2093600C65E9E /* VKFriend.swift */; };
+		4215AED41DE20F2100C65E9E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED31DE20F2100C65E9E /* MainTabBarController.swift */; };
+		4215AED61DE25CA700C65E9E /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED51DE25CA700C65E9E /* FriendTableViewCell.swift */; };
 		42FC4B091DDCEEC900C1BCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */; };
 		42FC4B0E1DDCEEC900C1BCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FC4B0C1DDCEEC900C1BCDD /* Main.storyboard */; };
 		42FC4B101DDCEEC900C1BCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FC4B0F1DDCEEC900C1BCDD /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		4215AEC81DE1C6AA00C65E9E /* VKFriends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKFriends.entitlements; sourceTree = "<group>"; };
+		4215AED11DE2093600C65E9E /* VKFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKFriend.swift; sourceTree = "<group>"; };
+		4215AED31DE20F2100C65E9E /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4215AED51DE25CA700C65E9E /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		42FC4B051DDCEEC900C1BCDD /* VKFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FC4B0D1DDCEEC900C1BCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,8 +94,11 @@
 				42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */,
 				42FC4B201DE0FC9300C1BCDD /* BaseVKDelegate.swift */,
 				42FC4B1E1DE0F7CD00C1BCDD /* VKWorker.swift */,
+				4215AED31DE20F2100C65E9E /* MainTabBarController.swift */,
+				4215AED11DE2093600C65E9E /* VKFriend.swift */,
 				42FC4B261DE1A87F00C1BCDD /* FriendsListViewController.swift */,
 				42FC4B0C1DDCEEC900C1BCDD /* Main.storyboard */,
+				4215AED51DE25CA700C65E9E /* FriendTableViewCell.swift */,
 				42FC4B1A1DE0F5DF00C1BCDD /* Constants.swift */,
 				42FC4B0F1DDCEEC900C1BCDD /* Assets.xcassets */,
 				42FC4B111DDCEEC900C1BCDD /* LaunchScreen.storyboard */,
@@ -238,9 +247,12 @@
 			files = (
 				42FC4B211DE0FC9300C1BCDD /* BaseVKDelegate.swift in Sources */,
 				42FC4B1F1DE0F7CD00C1BCDD /* VKWorker.swift in Sources */,
+				4215AED21DE2093600C65E9E /* VKFriend.swift in Sources */,
+				4215AED41DE20F2100C65E9E /* MainTabBarController.swift in Sources */,
 				42FC4B271DE1A87F00C1BCDD /* FriendsListViewController.swift in Sources */,
 				42FC4B091DDCEEC900C1BCDD /* AppDelegate.swift in Sources */,
 				42FC4B1B1DE0F5DF00C1BCDD /* Constants.swift in Sources */,
+				4215AED61DE25CA700C65E9E /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

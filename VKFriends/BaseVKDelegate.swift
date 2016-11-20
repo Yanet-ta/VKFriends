@@ -28,7 +28,7 @@ class BaseVKDelegate: VKDelegate {
         print("vkDidAuthorize \(parameters)")
         // Called when the user is log in.
         // Here you can start to send requests to the API.
-        VKWorker.sharedInstance.friendsGet()
+        NotificationCenter.default.post(name: kVKDidAuthorizeNotification, object: nil)
     }
     
     func vkDidUnauthorize() {
