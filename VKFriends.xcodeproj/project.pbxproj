@@ -10,6 +10,8 @@
 		4215AED21DE2093600C65E9E /* VKFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED11DE2093600C65E9E /* VKFriend.swift */; };
 		4215AED41DE20F2100C65E9E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED31DE20F2100C65E9E /* MainTabBarController.swift */; };
 		4215AED61DE25CA700C65E9E /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215AED51DE25CA700C65E9E /* FriendTableViewCell.swift */; };
+		42B714981DEA06A600A0A785 /* FriendsOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B714971DEA06A600A0A785 /* FriendsOnMapViewController.swift */; };
+		42B714A01DEDBFC600A0A785 /* circle-blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42B7149F1DEDBFC600A0A785 /* circle-blue.jpg */; };
 		42FC4B091DDCEEC900C1BCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */; };
 		42FC4B0E1DDCEEC900C1BCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FC4B0C1DDCEEC900C1BCDD /* Main.storyboard */; };
 		42FC4B101DDCEEC900C1BCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FC4B0F1DDCEEC900C1BCDD /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		4215AED11DE2093600C65E9E /* VKFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKFriend.swift; sourceTree = "<group>"; };
 		4215AED31DE20F2100C65E9E /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4215AED51DE25CA700C65E9E /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		42B714971DEA06A600A0A785 /* FriendsOnMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsOnMapViewController.swift; sourceTree = "<group>"; };
+		42B7149F1DEDBFC600A0A785 /* circle-blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "circle-blue.jpg"; sourceTree = "<group>"; };
 		42FC4B051DDCEEC900C1BCDD /* VKFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FC4B0D1DDCEEC900C1BCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42B7149E1DEDBFC600A0A785 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42B7149F1DEDBFC600A0A785 /* circle-blue.jpg */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 		42FC4AFC1DDCEEC900C1BCDD = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +102,12 @@
 		42FC4B071DDCEEC900C1BCDD /* VKFriends */ = {
 			isa = PBXGroup;
 			children = (
+				42B7149E1DEDBFC600A0A785 /* Resources */,
 				4215AEC81DE1C6AA00C65E9E /* VKFriends.entitlements */,
 				42FC4B081DDCEEC900C1BCDD /* AppDelegate.swift */,
 				42FC4B201DE0FC9300C1BCDD /* BaseVKDelegate.swift */,
 				42FC4B1E1DE0F7CD00C1BCDD /* VKWorker.swift */,
+				42B714971DEA06A600A0A785 /* FriendsOnMapViewController.swift */,
 				4215AED31DE20F2100C65E9E /* MainTabBarController.swift */,
 				4215AED11DE2093600C65E9E /* VKFriend.swift */,
 				42FC4B261DE1A87F00C1BCDD /* FriendsListViewController.swift */,
@@ -185,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FC4B131DDCEEC900C1BCDD /* LaunchScreen.storyboard in Resources */,
+				42B714A01DEDBFC600A0A785 /* circle-blue.jpg in Resources */,
 				42FC4B101DDCEEC900C1BCDD /* Assets.xcassets in Resources */,
 				42FC4B0E1DDCEEC900C1BCDD /* Main.storyboard in Resources */,
 			);
@@ -253,6 +268,7 @@
 				42FC4B091DDCEEC900C1BCDD /* AppDelegate.swift in Sources */,
 				42FC4B1B1DE0F5DF00C1BCDD /* Constants.swift in Sources */,
 				4215AED61DE25CA700C65E9E /* FriendTableViewCell.swift in Sources */,
+				42B714981DEA06A600A0A785 /* FriendsOnMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

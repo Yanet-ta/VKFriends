@@ -13,7 +13,7 @@ protocol ReloadableWithFriends {
     func reloadContent(friends: Array<VKFriend>)
 }
 
-class FriendsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  ,ReloadableWithFriends{
+class FriendsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,ReloadableWithFriends{
     
     @IBOutlet weak var tableView: UITableView!
     var friendItems:Array<VKFriend> = []

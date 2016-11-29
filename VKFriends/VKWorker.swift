@@ -24,8 +24,7 @@ class VKWorker {
     }()
     
     func friendsGet(completion : @escaping (Array<VKFriend>?, NetworkCoreError?) -> Void) {
-        
-        VK.API.Friends.get([.count : "", .fields : "city,domain"]).send(
+        VK.API.Friends.get([.count : "", .fields : "city,domain,photo_100"]).send(
             onSuccess: {response in
                 if let resultArray = self.parseResponse(json: response) {
                     completion(resultArray, nil)
@@ -38,40 +37,22 @@ class VKWorker {
     }
     
     func parseResponse(json: JSON) -> Array<VKFriend>? {
-        if json.type == .dictionary {
-            let friendsCount = json["count"]
-            if friendsCount.type == .number {
-                let countValue = friendsCount.intValue
-                if countValue > 0 {
-                    
-                    if json["items"].type == .array {
-                        let itemsList = json["items"]
-                        var friends = Array<VKFriend>()
-                        
-                        for index in 0...itemsList.count{
-                            let friend = VKFriend()
-                            if itemsList[index].type == .dictionary {
-                                let itemJSON = itemsList[index]
-                                
-                                friend.firstName = itemJSON["first_name"].stringValue
-                                friend.lastName = itemJSON["last_name"].stringValue
-                                
-                                if itemJSON["city"].type == .dictionary {
-                                    friend.cityName = itemJSON["city"]["title"].stringValue
-                                }
-                            }
-                            friends.append(friend)
-                            
-                        }
-                        return friends
-                        
-                    }
-                } else {
-                    print("Fail")
-                }
-            }
+        print(json)
+        var friends = Array<VKFriend>()
+        let resultArray = json["items"].arrayValue
+        for friend in resultArray {
+            let newFriend = VKFriend(friendID: friend["id"].intValue,
+                                     firstName: friend["first_name"].stringValue,
+                                     lastName: friend["last_name"].stringValue,
+                                     isOnline: friend["online"].intValue,
+                                     cityName: friend["city"]["title"].stringValue,
+                                     friendPhoto: friend["photo_100"].stringValue
+            )
+            friends.append(newFriend)
         }
-        return nil
+        friends = friends.sorted(by: {$0.isOnline > $1.isOnline})
+        return friends
     }
     
-}
+
+ }

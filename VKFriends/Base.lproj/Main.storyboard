@@ -55,32 +55,58 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mVE-cW-ZHz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mVE-cW-ZHz">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="6XW-nc-Ww8" customClass="FriendTableViewCell" customModule="VKFriends" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6XW-nc-Ww8" id="Ufl-pH-kjZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao7-gB-m06">
-                                                    <rect key="frame" x="16" y="11" width="349" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-VW-a5J">
+                                                    <rect key="frame" x="10" y="19" width="50" height="49.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="fN0-yV-Dyr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LU-9f-DfY">
+                                                    <rect key="frame" x="70" y="21.5" width="275" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="hm5-Bf-H4z"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-blue.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fko-6s-UgG" userLabel="is Online Image">
+                                                    <rect key="frame" x="350" y="39" width="10" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="KEW-xq-EVi"/>
+                                                        <constraint firstAttribute="height" constant="10" id="m7e-hz-D01"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ao7-gB-m06" firstAttribute="leading" secondItem="Ufl-pH-kjZ" secondAttribute="leading" constant="16" id="6no-hW-FFN"/>
-                                                <constraint firstItem="Ao7-gB-m06" firstAttribute="centerY" secondItem="Ufl-pH-kjZ" secondAttribute="centerY" id="B0k-DA-vNe"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ao7-gB-m06" secondAttribute="trailing" constant="10" id="hv5-sV-mew"/>
+                                                <constraint firstItem="yyY-VW-a5J" firstAttribute="top" secondItem="Ufl-pH-kjZ" secondAttribute="top" constant="19" id="2Jp-S9-CWe"/>
+                                                <constraint firstItem="fko-6s-UgG" firstAttribute="leading" secondItem="8LU-9f-DfY" secondAttribute="trailing" constant="5" id="PnY-yB-SQX"/>
+                                                <constraint firstItem="8LU-9f-DfY" firstAttribute="leading" secondItem="yyY-VW-a5J" secondAttribute="trailing" constant="10" id="T6L-zA-HZ9"/>
+                                                <constraint firstAttribute="trailing" secondItem="fko-6s-UgG" secondAttribute="trailing" constant="15" id="ehe-Rl-Vdy"/>
+                                                <constraint firstItem="yyY-VW-a5J" firstAttribute="leading" secondItem="Ufl-pH-kjZ" secondAttribute="leading" constant="10" id="gZI-nE-ISX"/>
+                                                <constraint firstItem="fko-6s-UgG" firstAttribute="centerY" secondItem="Ufl-pH-kjZ" secondAttribute="centerY" id="nDw-G7-LLA"/>
+                                                <constraint firstAttribute="bottom" secondItem="yyY-VW-a5J" secondAttribute="bottom" constant="19" id="uq7-KH-oGb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="yyY-VW-a5J" firstAttribute="centerY" secondItem="6XW-nc-Ww8" secondAttribute="centerY" id="dyb-7u-KsX"/>
+                                            <constraint firstItem="8LU-9f-DfY" firstAttribute="centerY" secondItem="6XW-nc-Ww8" secondAttribute="centerY" id="yLZ-ei-PcF"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="nameLabel" destination="Ao7-gB-m06" id="L48-Va-5ck"/>
+                                            <outlet property="friendPhoto" destination="yyY-VW-a5J" id="Uwy-dx-l6l"/>
+                                            <outlet property="isOnlineFlag" destination="fko-6s-UgG" id="Hn0-fu-LIH"/>
+                                            <outlet property="nameLabel" destination="8LU-9f-DfY" id="GO1-Qr-gzS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -149,4 +175,7 @@
             <point key="canvasLocation" x="885.60000000000002" y="-571.66416791604206"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle-blue.jpg" width="10" height="10"/>
+    </resources>
 </document>

@@ -15,6 +15,7 @@ class VKFriend {
     var lastName: String?
     var isOnline: Int
     var cityName: String?
+    var friendPhoto: String
     
     init() {
         friendID = 0
@@ -22,6 +23,16 @@ class VKFriend {
         lastName = ""
         isOnline = 0
         cityName = ""
+        friendPhoto = ""
+    }
+    
+    init(friendID: Int, firstName: String, lastName: String, isOnline: Int, cityName: String, friendPhoto: String) {
+        self.friendID = friendID
+        self.firstName = firstName
+        self.lastName = lastName
+        self.isOnline = isOnline
+        self.cityName = cityName
+        self.friendPhoto = friendPhoto
     }
     
 }
