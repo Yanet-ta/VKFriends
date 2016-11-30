@@ -20,27 +20,23 @@ class FriendTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        friendPhoto.layer.cornerRadius = friendPhoto.frame.height / 2
+    }
+    
     override func prepareForReuse() {
         nameLabel.text = nil
         friendPhoto.image = nil
     }
     
     func updateContent(friend: VKFriend) {
-        isOnlineFlag.isHidden = true
-        if friend.lastName != nil {
-             nameLabel.text = friend.firstName + " " + friend.lastName!
-        } else {
-        nameLabel.text = friend.firstName
-        }
-        //nameLabel.text = friend.firstName + " " + friend.lastName!
+        isOnlineFlag.isHidden = friend.isOnline == 0
+        nameLabel.text = friend.firstName + " " + (friend.lastName ?? "")
+        
         let imageURL = URL(string: friend.friendPhoto)
         if let tempImageURL = imageURL {
-            //friendPhoto.layer.cornerRadius = friendPhoto.frame.height / 2
             friendPhoto.sd_setImage(with: tempImageURL)
-        }
-        
-        if friend.isOnline == 1 {
-            isOnlineFlag.isHidden = false
         }
     }
     

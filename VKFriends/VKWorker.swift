@@ -41,6 +41,7 @@ class VKWorker {
         var friends = Array<VKFriend>()
         let resultArray = json["items"].arrayValue
         for friend in resultArray {
+            
             let newFriend = VKFriend(friendID: friend["id"].intValue,
                                      firstName: friend["first_name"].stringValue,
                                      lastName: friend["last_name"].stringValue,
